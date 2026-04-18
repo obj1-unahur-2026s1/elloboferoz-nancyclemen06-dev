@@ -1,27 +1,27 @@
 import lugares.*
 
 object feroz {
-    var pesoInicial = 10
+    var peso = 10
     var ubicaciónActual = bosque
 
-  method peso() {return pesoInicial}
+  method peso() {return peso}
 
   method ubicaciónActual() {return ubicaciónActual }
 
-  method estaSaludable() {return (pesoInicial > 20) && (pesoInicial < 150)}
+  method estaSaludable() {return (peso > 20) && (peso < 150)}
 
-  method comer(comida) { pesoInicial = pesoInicial + comida.peso() / 10 }
+  method comer(comida) { peso = peso + comida.peso() / 10 }
 
   method correr(ubicación) { ubicaciónActual = ubicación
-                             pesoInicial = pesoInicial - 1 }
+                             peso = peso - 1 }
   method conversar(persona) {}
 
   method disfrazarse(persona) {}
 
   method atacar(persona) { persona.recibirDaño() }
 
-  method morir() {pesoInicial = 0 }
+  method morir() {peso = 0 }
 
-  method sufrirCrisis() {pesoInicial = 10}
+  method sufrirCrisis() {peso = 10}
 }
 

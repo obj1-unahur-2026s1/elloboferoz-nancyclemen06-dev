@@ -14,10 +14,13 @@ object caperucita {
     method perderManzanaCaperucita() { canastaActual.perderManzana() }
 
     method canasta() { return canastaActual.cantidadDeManzanas() }
+
+    method morir() {}
 }
 
 object abuelita {
     method peso() {return 50}
+    method morir() {}
 }
 
 object canasta {
