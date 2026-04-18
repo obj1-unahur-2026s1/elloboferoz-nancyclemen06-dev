@@ -1,7 +1,7 @@
 
 object cazador {
     var energiaInicial = 100
-    var fuerzaInicial = 200
+    var fuerzaInicial = 150
 
     method energia() { return energiaInicial }
 
@@ -11,7 +11,7 @@ object cazador {
                                  energiaInicial = (energiaInicial - fuerzaGolpe).max(0)
                                }
     
-    method ganarEnergia(comida) { energiaInicial = energiaInicial + (comida * 0.30) }
+    method recuperarEnergia(comida) { energiaInicial = energiaInicial + (comida * 0.30) }
 
-    
+    method matar(perosna) { persona.morir() }
 }
