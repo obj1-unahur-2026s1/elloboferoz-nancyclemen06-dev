@@ -14,17 +14,14 @@ object feroz {
 
   method correr(ubicación) { ubicaciónActual = ubicación
                              pesoInicial = pesoInicial - 1 }
-
   method conversar(persona) {}
 
   method disfrazarse(persona) {}
 
-  method atacar(persona) { persona.energia() - 10}
+  method atacar(persona) { persona.recibirDaño() }
 
-  method morir() {return peso = 0 }
+  method morir() {pesoInicial = 0 }
 
-  method sufrirCrisis() {return 10}
-
-
+  method sufrirCrisis() {pesoInicial = 10}
 }
 

@@ -17,20 +17,19 @@ object historia {
   }
 
   method caperucitaEnElBosque(){
-    canasta.perderManzana()
+    caperucita.perderManzanaCaperucita()
     caperucita.irHasta(casaAbuelita)
   }
 
   method muerteDeCaperucita() {
     feroz.comer(caperucita)
-    feroz.comer(canasta)
     cazador.irHasta(casaAbuelita)
   }
 
   method final1() {
-    cazador.pelear(85)
+    cazador.pelear(89)
     feroz.atacar(cazador)
-    cazador.recuperarEnergia(manzana)
+    cazador.recuperarVida(manzana)
     cazador.matar(feroz)
   }
 

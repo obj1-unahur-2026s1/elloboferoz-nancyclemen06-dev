@@ -1,17 +1,24 @@
+import lugares.*
 
 object cazador {
-    var energiaInicial = 100
-    var fuerzaInicial = 150
+    var vida = 100
+    var ubicaciónActual = bosque
 
-    method energia() { return energiaInicial }
+    method vida() { return vida }
 
-    method fuerza() { return fuerzaInicial }
+    method ubicaciónActual() {return ubicaciónActual}
 
-    method pelear(fuerzaGolpe) { fuerzaInicial = (fuerzaInicial - fuerzaGolpe).max(0) 
-                                 energiaInicial = (energiaInicial - fuerzaGolpe).max(0)
-                               }
+    method pelear(fuerzaGolpe) {vida = (vida - fuerzaGolpe).max(0)}
     
-    method recuperarEnergia(comida) { energiaInicial = energiaInicial + (comida * 0.30) }
+    method recuperarVida(comida) { vida = vida + (comida.peso() * 5) }
 
-    method matar(perosna) { persona.morir() }
+    method matar(persona) { persona.morir() }
+
+    method irHasta(ubicación) { ubicaciónActual = ubicación }
+
+    method serAmigo(persona) {}
+
+    method comer(comida) {vida = vida + comida.peso()}
+
+    method recibirDaño() { vida = vida - 10 }
 }

@@ -3,15 +3,19 @@ import lugares.*
 
 object caperucita {
  var ubicaciónActual = bosque
+ var canastaActual = canasta
 
-    method peso() {return 60}
+    method peso() {return canastaActual.peso() + 60 }
 
     method ubicaciónActual() {return ubicaciónActual}
 
     method irHasta(ubicación) { ubicaciónActual = ubicación }
 
-    method canasta() { canasta }
+    method perderManzanaCaperucita() { canastaActual.perderManzana() }
+
+    method canasta() { return canastaActual.cantidadDeManzanas() }
 }
+
 object abuelita {
     method peso() {return 50}
 }
@@ -19,11 +23,9 @@ object abuelita {
 object canasta {
     var cantidadDeManzanasActual = 6
 
-    method cantidadDeManzanas() {return cantidadDeManzanasActual}
-
-    method peso() {return manzana.peso() * cantidadDeManzanasActual}
-
+    method peso() {return manzana.peso() * cantidadDeManzanasActual }
     method perderManzana() { cantidadDeManzanasActual = cantidadDeManzanasActual - 1}
+    method cantidadDeManzanas() {return cantidadDeManzanasActual}
 }
 
 object manzana {
